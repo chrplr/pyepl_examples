@@ -1,0 +1,5 @@
+This project contains a few toy examples using pyepl
+
+Try, for example:
+
+python pictures.py -s chris

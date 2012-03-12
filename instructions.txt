@@ -1,0 +1,8 @@
+Words will be displayed sequentially on the screen.
+
+When you detect the name of an animal in the list, 
+you must press the key 'P'.
+
+Act as fast as possible, avoiding making mistakes.
+
+Press RETURN to start.
