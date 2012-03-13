@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <>
+# Time-stamp: <2012-03-13 10:08 christophe@pallier.org>
 
 import csv
 from pyepl.locals import *
@@ -13,13 +13,14 @@ audio = AudioTrack("audio")
 key = KeyTrack("key")
 clk = PresentationClock()
 
-# read stimuli file 
+# read stimuli files 
 stimfile  = open('playlist.csv')
 reader = csv.reader(stimfile)
 soundfiles = []
+datadir = "audio/"
 for row in reader:
-    soundfiles.append(row[0])  
-rownum = len(soundfiles)
+    sounds.append(FileAudioClip(datadir + row[0]))  
+rownum = len(sounds)
 
 video.clear("black")
 
@@ -40,8 +41,7 @@ for trial in range(rownum):
     video.showProportional(Text(str(trial+1)), 0.5, 0.5)
     video.updateScreen()
 
-    sound = FileAudioClip(soundfiles[trial])  
-    sound.present(clk=clk)
+    sound[trial].present(clk=clk)
 
     waitForAnyKey()
     video.clear("black")
