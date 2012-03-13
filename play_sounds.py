@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# Time-stamp: <2012-03-13 10:08 christophe@pallier.org>
+# Time-stamp: <2012-03-13 11:28 christophe@pallier.org>
 
 import csv
 from pyepl.locals import *
@@ -16,7 +16,7 @@ clk = PresentationClock()
 # read stimuli files 
 stimfile  = open('playlist.csv')
 reader = csv.reader(stimfile)
-soundfiles = []
+sounds = []
 datadir = "audio/"
 for row in reader:
     sounds.append(FileAudioClip(datadir + row[0]))  
